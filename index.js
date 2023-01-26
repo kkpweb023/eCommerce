@@ -5,6 +5,7 @@ app.use(cors());
 let bodyParser = require('body-parser');
 let jsonParser = bodyParser.json();
 require('./Database/config');
+const port = process.env.PORT || 4000 ;
 const Products = require('./DataBase/ProductSchema');
 const CartProducts = require('./DataBase/CartSchema');
 const PaymentProducts = require('./DataBase/PaymentSchema');
@@ -270,8 +271,7 @@ app.get('/search/:key', async (req, res) => {
 
 
 
+app.listen(port, () => {
+    console.log(`from port ${port}`)
 
-
-
-
-app.listen(4000);
+})
