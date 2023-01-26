@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kkpweb023/e-commerce.git"
+    "url": "git+https://github.com/kkpweb023/eCommerce.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kkpweb023/e-commerce/issues"
+    "url": "https://github.com/kkpweb023/eCommerce/issues"
   },
-  "homepage": "https://github.com/kkpweb023/e-commerce#readme",
+  "homepage": "https://github.com/kkpweb023/eCommerce#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
