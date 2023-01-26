@@ -4,7 +4,7 @@ const cors = require('cors');
 app.use(cors());
 let bodyParser = require('body-parser');
 let jsonParser = bodyParser.json();
-require('./Database/config');
+require('./DataBase/config');
 const port = process.env.PORT || 4000 ;
 const Products = require('./DataBase/ProductSchema');
 const CartProducts = require('./DataBase/CartSchema');
