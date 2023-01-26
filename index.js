@@ -264,13 +264,6 @@ app.get('/search/:key', async (req, res) => {
 
 
 
-
-
-
-
-
-
-
 app.listen(port, () => {
     console.log(`from port ${port}`)
 
