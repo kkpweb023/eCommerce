@@ -262,6 +262,21 @@ app.get('/search/:key', async (req, res) => {
 })
 
 
+//Single view payment Slip dowload
+
+app.get('/paymentlist/:id',async (req,res)=>{
+    const singleData = await PaymentProducts.find({ _id:req.params.id })
+    res.send(singleData);
+})
+
+
+
+
+
+
+
+
+
 
 
 app.listen(port, () => {
