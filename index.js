@@ -196,9 +196,9 @@ res.send(singleData);
 })
 
 app.delete('/paymentlistDelete/:id',async (req,res)=>{
-    const singleData = await PaymentProducts.deleteOne({ id: req.params.id })
+    const singleData = await PaymentProducts.deleteOne({ _id: req.params.id })
     res.send(singleData);
-    })
+})
 
 //User Registration
 
