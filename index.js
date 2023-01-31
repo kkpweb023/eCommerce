@@ -276,9 +276,6 @@ app.get('/paymentlist/:id',async (req,res)=>{
 
 
 
-
-
-
 app.listen(port, () => {
     console.log(`from port ${port}`)
 
