@@ -11,6 +11,8 @@ const CartProducts = require('./DataBase/CartSchema');
 const PaymentProducts = require('./DataBase/PaymentSchema');
 const BankDetails = require('./DataBase/BankSchema');
 const UserSchema = require('./DataBase/UserSchema');
+const Info = require('./DataBase/InfoSchema');
+
 
 /*
 app.post('/productPost', jsonParser, async (req, res) => {
@@ -268,6 +270,44 @@ app.get('/paymentlist/:id',async (req,res)=>{
     const singleData = await PaymentProducts.find({ _id:req.params.id })
     res.send(singleData);
 })
+
+
+
+
+
+
+// for My_School forntend 
+
+
+app.post('/attendence',jsonParser,async(req,res)=>{
+
+    if(req.body.name==="" || req.body.subject==="" || req.body.remarks===""){
+           res.send("Field Empty")
+    }else{
+           const data = new Info({
+               name:req.body.name,
+               subject:req.body.subject,
+               remarks:req.body.remarks
+           })
+           let users = await data.save();
+           res.send(users);
+        
+   }       
+})
+
+
+app.get('/info_list', async (req, res) => {
+
+    const data = await Info.find({});
+
+    if(data.length > 0){
+        res.send(data)
+    }else{
+        res.header("Access-Control-Allow-Origin","*")
+        res.send([]);
+    }
+})
+
 
 
 
